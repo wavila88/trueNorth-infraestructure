@@ -1,14 +1,10 @@
-# Welcome to your CDK TypeScript project
+# Welcome to your CDK TypeScript project for lite-thinking
 
-This is a blank project for CDK development with TypeScript.
+In this project we're creating infraestructure for aws with following:
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+* Cluster.
+* VPC and its subnets.
+* 2 fargate instances.
+* One load balancer with its target group.
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+All of this in a few lines of code in the following [link](https://github.com/wavila88/lite-thinking-infraestructure/blob/develop/lib/cdk-infraestructure-stack.ts). 
