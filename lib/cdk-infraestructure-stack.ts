@@ -6,9 +6,9 @@ import * as ecs_patterns from "aws-cdk-lib/aws-ecs-patterns";
 
 
 const ENVIRONMENT_VARIABLES = {
-  NEXT_PUBLIC_SQL_USER : 'admin',
-  NEXT_PUBLIC_SQL_PASSWORD:'12345678',
-  NEXT_PUBLIC_SQL_SERVER: 'litethinking.c3xymb4w4f8t.us-east-1.rds.amazonaws.com',
+  NEXT_PUBLIC_SQL_USER : 'sa',
+  NEXT_PUBLIC_SQL_PASSWORD:'1234',
+  NEXT_PUBLIC_SQL_SERVER: 'local',
   NEXT_PUBLIC_SQL_DATABASE: 'LITE_THINKING'
 }
 
