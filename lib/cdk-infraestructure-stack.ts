@@ -31,7 +31,7 @@ export class CdkInfraestructureStack extends Stack {
     new ecs_patterns.ApplicationLoadBalancedFargateService(this, "MyFargateService2", {
       cluster: cluster, // Required
       cpu: 512, // Default is 256
-      desiredCount: 2, // Default is 1
+      desiredCount: 4, // Default is 1
       taskImageOptions: { image: ecs.ContainerImage.fromRegistry("public.ecr.aws/p1g5b2e2/think-lite"), environment:ENVIRONMENT_VARIABLES },
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: true // Default is true
