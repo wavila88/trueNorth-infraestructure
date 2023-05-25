@@ -1,4 +1,4 @@
-# Welcome to your CDK TypeScript project for lite-thinking
+# Welcome to your CDK TypeScript project for TRUENORTH-APP
 
 In this project we're creating infraestructure for aws with following:
 
