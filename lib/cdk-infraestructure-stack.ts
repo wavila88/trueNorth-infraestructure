@@ -6,10 +6,12 @@ import * as ecs_patterns from "aws-cdk-lib/aws-ecs-patterns";
 
 
 const ENVIRONMENT_VARIABLES = {
-  NEXT_PUBLIC_SQL_USER : 'sa',
-  NEXT_PUBLIC_SQL_PASSWORD:'1234',
-  NEXT_PUBLIC_SQL_SERVER: 'local',
-  NEXT_PUBLIC_SQL_DATABASE: 'LITE_THINKING'
+  SESSION_TIME : '7m',
+  SECRET_KEY:'9O8I7U6Y%',
+  SQL_DATABASE: 'sql9619488',
+  SQL_HOST: 'sql9.freesqldatabase.com',
+  SQL_PASSWORD: 'Xkm3frQs7G',
+  SQL_USER: 'sql9619488',
 }
 
 export class CdkInfraestructureStack extends Stack {
@@ -28,11 +30,11 @@ export class CdkInfraestructureStack extends Stack {
     });
 
     // Create a load-balanced Fargate service and make it public
-    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "MyFargateService2", {
+    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "MyFargateService", {
       cluster: cluster, // Required
       cpu: 512, // Default is 256
       desiredCount: 4, // Default is 1
-      taskImageOptions: { image: ecs.ContainerImage.fromRegistry("public.ecr.aws/p1g5b2e2/think-lite"), environment:ENVIRONMENT_VARIABLES },
+      taskImageOptions: { image: ecs.ContainerImage.fromRegistry("public.ecr.aws/p1g5b2e2/back-calculator"), environment:ENVIRONMENT_VARIABLES },
       memoryLimitMiB: 2048, // Default is 512
       publicLoadBalancer: true // Default is true
       
